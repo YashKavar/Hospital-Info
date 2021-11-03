@@ -1,6 +1,6 @@
 package com.example.hospitalinfo.Models
 
-class StoringData(fullname: String, username: String, email: String, phoneno: String, password: String){
+class StoringData(fullname: String, username: String, email: String, password: String){
 
     private lateinit var username: String
     private lateinit var email: String

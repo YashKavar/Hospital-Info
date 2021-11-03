@@ -15,39 +15,68 @@ import com.google.firebase.ktx.Firebase
 
 class Signup : AppCompatActivity() {
 
-//    private  lateinit var binding: ActivitySignupBinding
-    private lateinit var auth: FirebaseAuth
-    private lateinit var firebaseDatabase: FirebaseDatabase
     private  lateinit var signupRegister : Button
-    private  lateinit var signupEmail : EditText
-    private  lateinit var signupPass : EditText
-
-
+    private lateinit var signupLogin : Button
+    private  lateinit var signupEmail : TextInputLayout
+    private  lateinit var signupPass : TextInputLayout
+    private  lateinit var signupUsername : TextInputLayout
+    private lateinit var regex : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_signup)
-        auth = Firebase.auth
+
         signupRegister = findViewById(R.id.signup_register)
+        signupLogin = findViewById(R.id.signup_login)
         signupEmail = findViewById(R.id.signup_email)
         signupPass = findViewById(R.id.signup_password)
-        firebaseDatabase = FirebaseDatabase.getInstance()
+        signupUsername = findViewById(R.id.signup_username)
+
+        regex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$"
 
         signupRegister.setOnClickListener(){
 
-            auth.createUserWithEmailAndPassword(signupEmail.text.toString(), signupPass.text.toString()).
-            addOnCompleteListener(){
+            val create_username: String = signupUsername.editText?.text.toString();
+            val create_password: String = signupPass.editText?.text.toString();
+            val create_email: String = signupEmail.editText?.text.toString();
 
-                if (it.isSuccessful){
-                    Toast.makeText(this, "User Created Successfully", Toast.LENGTH_SHORT).show()
+            if (!create_username.isEmpty()){
+
+                signupUsername.setError(null)
+                signupUsername.setErrorEnabled(false)
+                if (!create_email.isEmpty()){
+
+                    signupEmail.setError(null)
+                    signupEmail.setErrorEnabled(false)
+                    if (!create_password.isEmpty()){
+
+                        signupPass.setError(null)
+                        signupPass.setErrorEnabled(false)
+
+                        if (!create_email.matches(regex.toRegex())){
+
+                        }
+                    }
+                    else{
+                        signupPass.setError("Please enter Password")
+                    }
                 }
                 else{
-                    Toast.makeText(this, "it.exception.toString()", Toast.LENGTH_SHORT).show()
+                    signupEmail.setError("Please enter Email")
                 }
             }
+            else{
+                signupUsername.setError("Please enter Username")
+            }
+        }
+
+        signupLogin.setOnClickListener(){
+
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
         }
 
     }
 }
+
 

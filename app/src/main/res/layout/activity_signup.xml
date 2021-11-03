@@ -97,7 +97,8 @@
             android:background="@color/login_text"
             android:text="Register"
             android:textColor="#000000"
-            app:cornerRadius="6dp" />
+            app:cornerRadius="6dp"
+            android:textSize="16dp"/>
 
         <Button
             android:id="@+id/signup_login"
@@ -109,7 +110,8 @@
             android:elevation="5dp"
             android:text="Click here to login"
             android:textColor="@color/black"
-            app:cornerRadius="6dp" />
+            app:cornerRadius="6dp"
+            android:textSize="16dp"/>
 
     </LinearLayout>
 
