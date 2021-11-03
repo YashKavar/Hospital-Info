@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Bed Info"
+        android:icon="@drawable/ic_bad"
+        android:id="@+id/badInfo"
+        />
+    <item
+        android:title="Plasma Info"
+        android:icon="@drawable/ic_plasma"
+        android:id="@+id/plasmaInfo"
+        />
+    <item
+        android:title="Oxygen Info"
+        android:icon="@drawable/ic_oxygen"
+        android:id="@+id/oxygenInfo"
+        />
+
+</menu>

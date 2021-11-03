@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/HospitalInfo/app/src/main/res/drawable/ic_bad.xml" value="0.2703125" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/activity_admin_contact_us.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/activity_admin_login_signup.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/activity_admin_profile.xml" value="0.264" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/activity_main.xml" value="0.17844202898550723" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/activity_user_dashbord.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/fragment_admin_beds.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/fragment_admin_hospital.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/fragment_admin_oxygen.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/fragment_admin_plasma.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/fragment_bed.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/fragment_oxygen.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/layout/fragment_plasma.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/menu/admin_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/menu/admintop_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/menu/custom_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/HospitalInfo/app/src/main/res/menu/nav_menu.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

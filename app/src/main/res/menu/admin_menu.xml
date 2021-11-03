@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Hospital"
+        android:icon="@drawable/ic_hospital"
+        android:id="@+id/hospitalAdd"
+        />
+    <item
+        android:title="Beds"
+        android:icon="@drawable/ic_bad"
+        android:id="@+id/bedsAdd"
+        />
+    <item
+        android:title="Plasma"
+        android:icon="@drawable/ic_plasma"
+        android:id="@+id/plasmaAdd"
+        />
+    <item
+        android:title="Oxygen"
+        android:icon="@drawable/ic_oxygen"
+        android:id="@+id/oxygenAdd"
+        />
+
+</menu>
