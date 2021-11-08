@@ -55,6 +55,10 @@ class Signup : AppCompatActivity() {
 
                         if (!create_email.matches(regex.toRegex())){
 
+
+                        }
+                        else{
+                            signupEmail.setError("Invalid Email")
                         }
                     }
                     else{
