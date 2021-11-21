@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.hospitalinfo.Models.StoringData
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -21,6 +22,9 @@ class Signup : AppCompatActivity() {
     private  lateinit var signupPass : TextInputLayout
     private  lateinit var signupUsername : TextInputLayout
     private lateinit var regex : String
+
+    private lateinit var firebaseDatabase: FirebaseDatabase
+    private lateinit var reference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +59,20 @@ class Signup : AppCompatActivity() {
 
                         if (!create_email.matches(regex.toRegex())){
 
+                            firebaseDatabase = FirebaseDatabase.getInstance()
+                            reference = firebaseDatabase.getReference("datauser")
+
+                            val fetch_username: String = signupUsername.editText?.text.toString();
+                            val fetch_password: String = signupPass.editText?.text.toString();
+                            val fetch_email: String = signupEmail.editText?.text.toString();
+
+                            val dataStore = StoringData(fetch_username, fetch_email, fetch_password)
+                            reference.child(fetch_username).setValue(dataStore)
+
+                            Toast.makeText(this, "Register Successfully", Toast.LENGTH_SHORT).show()
+
+                            val intent = Intent(this, Login::class.java)
+                            startActivity(intent)
 
                         }
                         else{

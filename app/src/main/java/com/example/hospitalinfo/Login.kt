@@ -56,7 +56,7 @@ public class Login : AppCompatActivity() {
                                 username_var.setError(null)
                                 username_var.setErrorEnabled(false)
                                 val passwordcheck: String = dataSnapshot.child(username_data).child("password").getValue().toString()
-                                usernameForProfileSet = dataSnapshot.child(username_data).child("username").getValue().toString()
+//                                usernameForProfileSet = dataSnapshot.child(username_data).child("username").getValue().toString()
                                 if (passwordcheck.equals(password_data)){
                                     password_var.setError(null)
                                     password_var.setErrorEnabled(false)
